@@ -1,0 +1,74 @@
+body {
+  overflow-y: hidden;
+  background-color: lightgrey;
+  font-style: italic;
+
+}
+
+.main{
+  display: flex;
+  /*border: 5px red solid;*/
+  width: 75%;
+  margin: auto;
+  border: 3px black solid;
+  margin: 20px;
+  width: 500px;
+
+}
+
+
+.wrapper {
+  overflow: hidden;
+  height: 100%;
+  width: 500px;
+  background-color: red;
+}
+
+.slides {
+  height: 500px;
+  width: 500px;
+  /* We set the scroll snapping */
+  scroll-snap-type: x mandatory;
+  /* Necessary for mobile scrolling */
+  -webkit-overflow-scrolling: touch;
+  /* For layout purposes */
+  display: flex;
+  /* To allow horizontal scrolling */
+  overflow-x: scroll;
+}
+
+.slides::-webkit-scrollbar {
+    display: none;
+}
+.slides {
+    -ms-overflow-style: none;
+}
+section {
+  /* For styling purposes */
+  max-height: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Set where the snapping should happen */
+  scroll-snap-align: start;
+
+}
+
+.cover {
+  background-image: url('cover/cover.jpg')
+}
+.kangaroo {
+  background-image: url('kangaroo/kangaroo.jpg')
+}
+.elephant {
+  background-image: url('elephant/elephant.jpg')
+}
+.dog {
+  background-image: url('dog/doggy.jpg')
+}
+

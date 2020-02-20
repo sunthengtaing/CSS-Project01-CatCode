@@ -1,0 +1,487 @@
+body {
+  overflow-y: hidden;
+  background-color: lightgrey;
+  font-style: italic;
+
+}
+
+.main-main {
+  display: flex;
+  /*border: 5px red solid;*/
+  width: 75%;
+  margin: auto;
+
+}
+.main-container {
+  border: 3px black solid;
+  margin: 20px;
+  width: 500px;
+}
+
+.main-wrapper {
+  display: flex;
+}
+
+.wrapper {
+  overflow: hidden;
+  height: 100%;
+  width: 100px;
+  background-color: red;
+}
+
+.slides {
+  height: 100px;
+  width: 100px;
+  /* We set the scroll snapping */
+  scroll-snap-type: x mandatory;
+  /* Necessary for mobile scrolling */
+  -webkit-overflow-scrolling: touch;
+  /* For layout purposes */
+  display: flex;
+  /* To allow horizontal scrolling */
+  overflow-x: scroll;
+}
+
+.slides::-webkit-scrollbar {
+    display: none;
+}
+.slides {
+    -ms-overflow-style: none;
+}
+section {
+  /* For styling purposes */
+  max-height: 100%;
+  min-height: 100%;
+  max-width: 100%;
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Set where the snapping should happen */
+  scroll-snap-align: start;
+
+}
+.riddles-container {
+  position: relative;
+  
+  margin:auto;
+}
+
+#smaller-box{
+  width: 200px;
+  height: 50px;
+
+  margin: auto;
+  margin-top: 0px;
+  padding: 0px;
+
+}
+#smaller-box h2{
+  vertical-align: middle;
+  line-height: 50px;
+  font-size: 15px;
+}
+
+.flip-box {
+  background-color: transparent;
+  width: 300px;
+  height: 100px;
+  border: 1px solid #f1f1f1;
+  perspective: 1000px;
+  margin-bottom: 30px;
+}
+
+.flip-box h2{
+  margin: 0px;
+  vertical-align: middle;
+}
+
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flip-box-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-box-front h2{
+  vertical-align: middle;
+  line-height: 100px;
+}
+
+.flip-box-back {
+  background-color: #bbb;
+  color: black;
+  font-size: 12px;
+  transform: rotateY(180deg);
+}
+
+/* Styling for the sections */
+section h2 {
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  color: #1a1a1a;
+  font-weight: 100;
+}
+
+section h3 {
+  font-family: system-ui, sans-serif;
+  font-size: 1rem;
+  color: #ffffff;
+  font-weight: 100;
+}
+
+/* cover image */
+.a1-cover {
+  background-image: url('cover/a1-cover.jpg')
+}
+.b1-cover {
+  background-image: url('cover/b1-cover.jpg')
+}
+.c1-cover {
+  background-image: url('cover/c1-cover.jpg')
+}
+.d1-cover {
+  background-image: url('cover/d1-cover.jpg')
+}
+.e1-cover {
+  background-image: url('cover/e1-cover.jpg')
+}
+
+
+.a2-cover {
+  background-image: url('cover/a2-cover.jpg')
+}
+.b2-cover {
+  background-image: url('cover/b2-cover.jpg')
+}
+.c2-cover {
+  background-image: url('cover/c2-cover.jpg')
+}
+.d2-cover {
+  background-image: url('cover/d2-cover.jpg')
+}
+.e2-cover {
+  background-image: url('cover/e2-cover.jpg')
+}
+
+.a3-cover {
+  background-image: url('cover/a3-cover.jpg')
+}
+.b3-cover {
+  background-image: url('cover/b3-cover.jpg')
+}
+.c3-cover {
+  background-image: url('cover/c3-cover.jpg')
+}
+.d3-cover {
+  background-image: url('cover/d3-cover.jpg')
+}
+.e3-cover {
+  background-image: url('cover/e3-cover.jpg')
+}
+
+.a4-cover {
+  background-image: url('cover/a4-cover.jpg')
+}
+.b4-cover {
+  background-image: url('cover/b4-cover.jpg')
+}
+.c4-cover {
+  background-image: url('cover/c4-cover.jpg')
+}
+.d4-cover {
+  background-image: url('cover/d4-cover.jpg')
+}
+.e4-cover {
+  background-image: url('cover/e4-cover.jpg')
+}
+
+.a5-cover {
+  background-image: url('cover/a5-cover.jpg')
+}
+.b5-cover {
+  background-image: url('cover/b5-cover.jpg')
+}
+.c5-cover {
+  background-image: url('cover/c5-cover.jpg')
+}
+.d5-cover {
+  background-image: url('cover/d5-cover.jpg')
+}
+.e5-cover {
+  background-image: url('cover/e5-cover.jpg')
+}
+
+/* dog image */
+
+.a1-dog {
+  background-image: url('dog/a1-dog.jpg')
+}
+.b1-dog {
+  background-image: url('dog/b1-dog.jpg')
+}
+.c1-dog {
+  background-image: url('dog/c1-dog.jpg')
+}
+.d1-dog {
+  background-image: url('dog/d1-dog.jpg')
+}
+.e1-dog {
+  background-image: url('dog/e1-dog.jpg')
+}
+
+
+.a2-dog {
+  background-image: url('dog/a2-dog.jpg')
+}
+.b2-dog {
+  background-image: url('dog/b2-dog.jpg')
+}
+.c2-dog {
+  background-image: url('dog/c2-dog.jpg')
+}
+.d2-dog {
+  background-image: url('dog/d2-dog.jpg')
+}
+.e2-dog {
+  background-image: url('dog/e2-dog.jpg')
+}
+
+.a3-dog {
+  background-image: url('dog/a3-dog.jpg')
+}
+.b3-dog {
+  background-image: url('dog/b3-dog.jpg')
+}
+.c3-dog {
+  background-image: url('dog/c3-dog.jpg')
+}
+.d3-dog {
+  background-image: url('dog/d3-dog.jpg')
+}
+.e3-dog {
+  background-image: url('dog/e3-dog.jpg')
+}
+
+.a4-dog {
+  background-image: url('dog/a4-dog.jpg')
+}
+.b4-dog {
+  background-image: url('dog/b4-dog.jpg')
+}
+.c4-dog {
+  background-image: url('dog/c4-dog.jpg')
+}
+.d4-dog {
+  background-image: url('dog/d4-dog.jpg')
+}
+.e4-dog {
+  background-image: url('dog/e4-dog.jpg')
+}
+
+.a5-dog {
+  background-image: url('dog/a5-dog.jpg')
+}
+.b5-dog {
+  background-image: url('dog/b5-dog.jpg')
+}
+.c5-dog {
+  background-image: url('dog/c5-dog.jpg')
+}
+.d5-dog {
+  background-image: url('dog/d5-dog.jpg')
+}
+.e5-dog {
+  background-image: url('dog/e5-dog.jpg')
+}
+
+/* kangaroo image */
+.a1-kangaroo {
+  background-image: url('kangaroo/a1-kangaroo.jpg')
+}
+.b1-kangaroo {
+  background-image: url('kangaroo/b1-kangaroo.jpg')
+}
+.c1-kangaroo {
+  background-image: url('kangaroo/c1-kangaroo.jpg')
+}
+.d1-kangaroo {
+  background-image: url('kangaroo/d1-kangaroo.jpg')
+}
+.e1-kangaroo {
+  background-image: url('kangaroo/e1-kangaroo.jpg')
+}
+
+
+.a2-kangaroo {
+  background-image: url('kangaroo/a2-kangaroo.jpg')
+}
+.b2-kangaroo {
+  background-image: url('kangaroo/b2-kangaroo.jpg')
+}
+.c2-kangaroo {
+  background-image: url('kangaroo/c2-kangaroo.jpg')
+}
+.d2-kangaroo {
+  background-image: url('kangaroo/d2-kangaroo.jpg')
+}
+.e2-kangaroo {
+  background-image: url('kangaroo/e2-kangaroo.jpg')
+}
+
+.a3-kangaroo {
+  background-image: url('kangaroo/a3-kangaroo.jpg')
+}
+.b3-kangaroo {
+  background-image: url('kangaroo/b3-kangaroo.jpg')
+}
+.c3-kangaroo {
+  background-image: url('kangaroo/c3-kangaroo.jpg')
+}
+.d3-kangaroo {
+  background-image: url('kangaroo/d3-kangaroo.jpg')
+}
+.e3-kangaroo {
+  background-image: url('kangaroo/e3-kangaroo.jpg')
+}
+
+.a4-kangaroo {
+  background-image: url('kangaroo/a4-kangaroo.jpg')
+}
+.b4-kangaroo {
+  background-image: url('kangaroo/b4-kangaroo.jpg')
+}
+.c4-kangaroo {
+  background-image: url('kangaroo/c4-kangaroo.jpg')
+}
+.d4-kangaroo {
+  background-image: url('kangaroo/d4-kangaroo.jpg')
+}
+.e4-kangaroo {
+  background-image: url('kangaroo/e4-kangaroo.jpg')
+}
+
+.a5-kangaroo {
+  background-image: url('kangaroo/a5-kangaroo.jpg')
+}
+.b5-kangaroo {
+  background-image: url('kangaroo/b5-kangaroo.jpg')
+}
+.c5-kangaroo {
+  background-image: url('kangaroo/c5-kangaroo.jpg')
+}
+.d5-kangaroo {
+  background-image: url('kangaroo/d5-kangaroo.jpg')
+}
+.e5-kangaroo {
+  background-image: url('kangaroo/e5-kangaroo.jpg')
+}
+
+/* elepant image*/
+.a1-elephant {
+  background-image: url('elephant/a1-elephant.jpg')
+}
+.b1-elephant {
+  background-image: url('elephant/b1-elephant.jpg')
+}
+.c1-elephant {
+  background-image: url('elephant/c1-elephant.jpg')
+}
+.d1-elephant {
+  background-image: url('elephant/d1-elephant.jpg')
+}
+.e1-elephant {
+  background-image: url('elephant/e1-elephant.jpg')
+}
+
+
+.a2-elephant {
+  background-image: url('elephant/a2-elephant.jpg')
+}
+.b2-elephant {
+  background-image: url('elephant/b2-elephant.jpg')
+}
+.c2-elephant {
+  background-image: url('elephant/c2-elephant.jpg')
+}
+.d2-elephant {
+  background-image: url('elephant/d2-elephant.jpg')
+}
+.e2-elephant {
+  background-image: url('elephant/e2-elephant.jpg')
+}
+
+.a3-elephant {
+  background-image: url('elephant/a3-elephant.jpg')
+}
+.b3-elephant {
+  background-image: url('elephant/b3-elephant.jpg')
+}
+.c3-elephant {
+  background-image: url('elephant/c3-elephant.jpg')
+}
+.d3-elephant {
+  background-image: url('elephant/d3-elephant.jpg')
+}
+.e3-elephant {
+  background-image: url('elephant/e3-elephant.jpg')
+}
+
+.a4-elephant {
+  background-image: url('elephant/a4-elephant.jpg')
+}
+.b4-elephant {
+  background-image: url('elephant/b4-elephant.jpg')
+}
+.c4-elephant {
+  background-image: url('elephant/c4-elephant.jpg')
+}
+.d4-elephant {
+  background-image: url('elephant/d4-elephant.jpg')
+}
+.e4-elephant {
+  background-image: url('elephant/e4-elephant.jpg')
+}
+
+.a5-elephant {
+  background-image: url('elephant/a5-elephant.jpg')
+}
+.b5-elephant {
+  background-image: url('elephant/b5-elephant.jpg')
+}
+.c5-elephant {
+  background-image: url('elephant/c5-elephant.jpg')
+}
+.d5-elephant {
+  background-image: url('elephant/d5-elephant.jpg')
+}
+.e5-elephant {
+  background-image: url('elephant/e5-elephant.jpg')
+}
+/**/
+
+
+.section-4 {
+  background-image: url('dog/a1-dog.jpg')
+}
